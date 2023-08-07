@@ -1,26 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import UserList from './components/UserList';
+import ToDoList from './components/ToDoList';
+import './App.css'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <div className='wrapper'>
+        <h1 className='title'>List of users and toDo's</h1>
+        <h2 className='subtitle'>The app use such technology like React, Redux and of course TypeScript. </h2>
+        <p className='paragraph'>The data is taken from a third-party server according to the provided API.</p>
+      </div>
+      
+      <span>List of Users:</span>
+      <UserList/>
+      <span>List of toDo:</span>
+      <ToDoList/>
     </div>
   );
-}
+};
 
 export default App;
